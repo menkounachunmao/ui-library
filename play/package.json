@@ -1,0 +1,16 @@
+{
+  "name": "@ft-design/play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "vite": "^3.2.4"
+  }
+}
