@@ -1,5 +1,10 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
+import FtButton from "@ft-design/components/button";
+import FtIframe from "@ft-design/components/iframe";
+import FtInput from "@ft-design/components/input";
 const app = createApp(App);
+app.use(FtButton);
+app.use(FtIframe);
+app.use(FtInput);
 app.mount("#app");

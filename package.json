@@ -11,5 +11,10 @@
   "devDependencies": {
     "typescript": "^4.9.3",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@ft-design/components": "workspace:^1.0.0",
+    "@ft-design/theme-chalk": "workspace:^1.0.0",
+    "@ft-design/utils": "workspace:^1.0.0"
   }
 }
