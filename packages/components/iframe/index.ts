@@ -1,5 +1,5 @@
 import Iframe from "./src/FtIframe.vue";
-import { withInstall } from "@ft-design/utils/with-install";
+import { withInstall } from "@ft-design/utils";
 
 const FtIframe = withInstall(Iframe);
 export { FtIframe };

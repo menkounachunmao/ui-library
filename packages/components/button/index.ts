@@ -1,5 +1,5 @@
 import Button from "./src/FtButton.vue";
-import { withInstall } from "@ft-design/utils/with-install";
+import { withInstall } from "@ft-design/utils";
 
 const FtButton = withInstall(Button);
 export { FtButton };

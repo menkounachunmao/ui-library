@@ -1,5 +1,5 @@
 import Input from "./src/FtInput.vue";
-import { withInstall } from "@ft-design/utils/with-install";
+import { withInstall } from "@ft-design/utils";
 
 const FtInput = withInstall(Input);
 export { FtInput };
