@@ -8,7 +8,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import esbuild, { minify as minifyPlugin } from "rollup-plugin-esbuild";
 import { parallel } from "gulp";
 import { PKG_BRAND_NAME, PKG_CAMELCASE_NAME } from "../const/pkg";
-import { uiRoot, fdOutput } from "../utils/paths";
+import { fdRoot, fdOutput } from "../utils/paths";
 import { version } from "../../../packages/ft-ui/version";
 // import { ElementPlusAlias } from "../plugins/element-plus-alias";
 import {
@@ -58,7 +58,7 @@ async function buildFullEntry(minify: boolean) {
   }
 
   const bundle = await rollup({
-    input: path.resolve(uiRoot, "index.ts"),
+    input: path.resolve(fdRoot, "index.ts"),
     plugins,
     external: await generateExternal({ full: true }),
     treeshake: true,

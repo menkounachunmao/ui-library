@@ -9,7 +9,7 @@ import glob from "fast-glob";
 import { generateExternal, writeBundles } from "../utils/rollup";
 import { buildConfigEntries, target } from "../build-info";
 import type { OutputOptions } from "rollup";
-import { uiRoot, pkgRoot, excludeFiles } from "../utils/paths";
+import { fdRoot, pkgRoot, excludeFiles } from "../utils/paths";
 
 export const buildModules = async () => {
   const input = excludeFiles(
@@ -51,7 +51,7 @@ export const buildModules = async () => {
         dir: config.output.path,
         exports: module === "cjs" ? "named" : undefined,
         preserveModules: true,
-        preserveModulesRoot: uiRoot,
+        preserveModulesRoot: fdRoot,
         sourcemap: true,
         entryFileNames: `[name].${config.ext}`,
       };

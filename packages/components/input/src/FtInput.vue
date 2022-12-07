@@ -7,5 +7,4 @@
 </template>
 <script lang="ts" setup>
 import { ElInput } from "element-plus";
-// import "element-plus/es/components/input/style/css";
 </script>

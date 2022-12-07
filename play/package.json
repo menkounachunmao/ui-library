@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
+    "ft-design": "workspace:^1.0.0",
     "vite": "^3.2.4"
   }
 }
