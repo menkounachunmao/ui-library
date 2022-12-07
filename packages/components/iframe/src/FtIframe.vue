@@ -1,7 +1,6 @@
 <template>
   <div style="display: flex; height: 100%">
-    <div id="iframeWrapper" class="flex-1 min-h-0 w-full relative">
-      <!-- <LoadingPage v-if="loading" style="height: 100%; height: 100%" /> -->
+    <div id="iframeWrapper">
       <iframe
         v-if="url"
         ref="iframeRef"
@@ -47,11 +46,3 @@ watch(height, () => {
   setIframeHeight();
 });
 </script>
-<style lang="scss" scoped>
-.iframe {
-  width: 100%;
-  border: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-</style>

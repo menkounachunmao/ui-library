@@ -2,5 +2,6 @@
 import type { Plugin } from "vue";
 import FtButton from "@ft-design/components/button";
 import FtIframe from "@ft-design/components/iframe";
+import FtInput from "@ft-design/components/input";
 
-export default [FtButton, FtIframe] as Plugin[];
+export default [FtButton, FtIframe, FtInput] as Plugin[];
