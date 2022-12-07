@@ -6,8 +6,12 @@ export const compRoot = resolve(pkgRoot, "components");
 export const themeRoot = resolve(pkgRoot, "theme-chalk");
 export const uiRoot = resolve(pkgRoot, "ft-ui");
 export const uiPackage = resolve(uiRoot, "package.json");
-export const uiOutput = resolve(projRoot, "dist");
 export const buildRoot = resolve(projRoot, "build");
+
+/** `/dist` */
+export const buildOutput = resolve(projRoot, "dist");
+/** `/dist/ft-design` */
+export const fdOutput = resolve(buildOutput, "ft-design");
 
 export const excludeFiles = (files: string[]) => {
   const excludes = ["node_modules", "test", "mock", "gulpfile", "dist"];
