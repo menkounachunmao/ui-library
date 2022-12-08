@@ -1,5 +1,5 @@
 import path from "path";
-import { buildOutput } from "./utils/paths";
+import { fdOutput } from "./utils/paths";
 
 import type { ModuleFormat } from "rollup";
 
@@ -26,10 +26,10 @@ export const buildConfig: Record<Module, BuildInfo> = {
     ext: "mjs",
     output: {
       name: "es",
-      path: path.resolve(buildOutput, "es"),
+      path: path.resolve(fdOutput, "es"),
     },
     bundle: {
-      path: `ft-ui/es`,
+      path: `ft-design/es`,
     },
   },
   cjs: {
@@ -38,10 +38,10 @@ export const buildConfig: Record<Module, BuildInfo> = {
     ext: "js",
     output: {
       name: "lib",
-      path: path.resolve(buildOutput, "lib"),
+      path: path.resolve(fdOutput, "lib"),
     },
     bundle: {
-      path: `ft-ui/lib`,
+      path: `ft-design/lib`,
     },
   },
 };

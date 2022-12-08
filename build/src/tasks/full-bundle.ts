@@ -9,7 +9,7 @@ import esbuild, { minify as minifyPlugin } from "rollup-plugin-esbuild";
 import { parallel } from "gulp";
 import { PKG_BRAND_NAME, PKG_CAMELCASE_NAME } from "../const/pkg";
 import { fdRoot, fdOutput } from "../utils/paths";
-import { version } from "../../../packages/ft-ui/version";
+import { version } from "../../../packages/ft-design/version";
 // import { ElementPlusAlias } from "../plugins/element-plus-alias";
 import {
   formatBundleFilename,
