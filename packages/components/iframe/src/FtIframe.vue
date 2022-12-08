@@ -12,15 +12,14 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup>
-import { onMounted, ref, watch } from "vue";
-import { useWindowSize } from "@vueuse/core";
-
-const loading = ref(true);
-const iframeRef = ref(null);
-interface Iprops {
+<script setup lang="ts">
+export interface Iprops {
   url: string;
 }
+import { onMounted, ref, watch } from "vue";
+import { useWindowSize } from "@vueuse/core";
+const loading = ref(true);
+const iframeRef = ref(null);
 const props = defineProps<Iprops>();
 
 watch(

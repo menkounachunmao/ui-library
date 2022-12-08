@@ -2,6 +2,7 @@ import path from "path";
 import { fdOutput } from "./utils/paths";
 
 import type { ModuleFormat } from "rollup";
+import { PKG_NAME } from "./const/pkg";
 
 export const modules = ["esm", "cjs"] as const;
 export type Module = typeof modules[number];
@@ -29,7 +30,7 @@ export const buildConfig: Record<Module, BuildInfo> = {
       path: path.resolve(fdOutput, "es"),
     },
     bundle: {
-      path: `ft-design/es`,
+      path: `${PKG_NAME}/es`,
     },
   },
   cjs: {
@@ -41,7 +42,7 @@ export const buildConfig: Record<Module, BuildInfo> = {
       path: path.resolve(fdOutput, "lib"),
     },
     bundle: {
-      path: `ft-design/lib`,
+      path: `${PKG_NAME}/lib`,
     },
   },
 };

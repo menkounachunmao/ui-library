@@ -10,6 +10,7 @@ import { generateExternal, writeBundles } from "../utils/rollup";
 import { buildConfigEntries, target } from "../build-info";
 import type { OutputOptions } from "rollup";
 import { fdRoot, pkgRoot, excludeFiles } from "../utils/paths";
+import { PlusAlias } from "../plugins/alias";
 
 export const buildModules = async () => {
   const input = excludeFiles(
@@ -23,6 +24,7 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: [
+      PlusAlias(),
       DefineOptions(),
       vue({
         isProduction: false,

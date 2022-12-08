@@ -10,7 +10,6 @@ import { parallel } from "gulp";
 import { PKG_BRAND_NAME, PKG_CAMELCASE_NAME } from "../const/pkg";
 import { fdRoot, fdOutput } from "../utils/paths";
 import { version } from "../../../packages/ft-design/version";
-// import { ElementPlusAlias } from "../plugins/element-plus-alias";
 import {
   formatBundleFilename,
   generateExternal,
@@ -19,12 +18,13 @@ import {
 } from "../utils";
 import { target } from "../build-info";
 import type { Plugin } from "rollup";
+import { PlusAlias } from "../plugins/alias";
 
 const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`;
 
 async function buildFullEntry(minify: boolean) {
   const plugins: Plugin[] = [
-    // ElementPlusAlias(),
+    PlusAlias(),
     DefineOptions(),
     vue({
       isProduction: true,

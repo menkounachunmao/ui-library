@@ -10,14 +10,14 @@ import { buildConfig, Module } from "./src";
 export const copyFiles = () =>
   Promise.all([
     copyFile(fdPackage, path.join(fdOutput, "package.json")),
-    // copyFile(
-    //   path.resolve(projRoot, "README.md"),
-    //   path.resolve(fdOutput, "README.md")
-    // ),
-    // copyFile(
-    //   path.resolve(projRoot, "global.d.ts"),
-    //   path.resolve(fdOutput, "global.d.ts")
-    // ),
+    copyFile(
+      path.resolve(projRoot, "README.md"),
+      path.resolve(fdOutput, "README.md")
+    ),
+    copyFile(
+      path.resolve(projRoot, "global.d.ts"),
+      path.resolve(fdOutput, "global.d.ts")
+    ),
   ]);
 
 export const copyTypesDefinitions: TaskFunction = (done) => {
@@ -44,6 +44,7 @@ export default series(
   parallel(
     runTask("buildModules"),
     runTask("buildFullBundle"),
+    runTask("generateTypesDefinitions"),
     series(
       withTaskName("buildThemeChalk", () =>
         run("pnpm run -C packages/theme-chalk build")
@@ -51,7 +52,7 @@ export default series(
       copyFullStyle
     )
   ),
-  parallel(copyFiles)
+  parallel(copyTypesDefinitions, copyFiles)
 );
 
 export * from "./src";

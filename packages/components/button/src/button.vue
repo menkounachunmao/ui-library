@@ -7,4 +7,7 @@
 </template>
 <script lang="ts" setup>
 import { ElButton } from "element-plus";
+defineOptions({
+  name: "FtButton",
+});
 </script>
