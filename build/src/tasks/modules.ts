@@ -13,11 +13,12 @@ import { fdRoot, pkgRoot, excludeFiles } from "../utils/paths";
 import { PlusAlias } from "../plugins/alias";
 
 export const buildModules = async () => {
+  // 查找需要打包的文件
   const input = excludeFiles(
     await glob("**/*.{js,ts,vue}", {
-      cwd: pkgRoot,
-      absolute: true,
-      onlyFiles: true,
+      cwd: pkgRoot, // 搜索的目录
+      absolute: true, // 返回绝对路径  ['/home/user/index.js']
+      onlyFiles: true, // 只返回文件
     })
   );
 

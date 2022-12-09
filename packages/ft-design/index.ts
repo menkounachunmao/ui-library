@@ -1,11 +1,6 @@
-import type { App } from "vue"; // ts中的优化只获取类型
 import Components from "./component";
-
+import { makeInstaller } from "./make-installer";
 const components = [...Components];
-const install = (app: App) => {
-  components.forEach((component) => app.use(component));
-};
-export default {
-  install,
-};
+
+export const install = makeInstaller(components).install;
 export * from "@ft-design/components";

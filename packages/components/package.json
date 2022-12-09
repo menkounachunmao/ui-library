@@ -1,20 +1,14 @@
 {
   "name": "@ft-design/components",
   "version": "1.0.0",
-  "description": "",
+  "description": "all components are settled here",
   "main": "index.ts",
   "module": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@vueuse/core": "^9.5.0",
-    "element-plus": "^2.2.21",
-    "sass": "^1.56.1"
-  },
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
   "peerDependencies": {
     "vue": "^3.2.0"
-  }
+  },
+  "types": "index.d.ts",
+  "sideEffects": false
 }

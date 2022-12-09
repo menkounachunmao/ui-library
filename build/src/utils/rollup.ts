@@ -1,4 +1,4 @@
-import { uiPackage } from "./paths";
+import { fdPackage } from "./paths";
 import type { ProjectManifest } from "@pnpm/types";
 import type { OutputOptions, RollupBuild } from "rollup";
 
@@ -18,8 +18,9 @@ export const getPackageDependencies = (
   };
 };
 
+// rollup 打包时排除 package 中的依赖项
 export const generateExternal = async (options: { full: boolean }) => {
-  const { dependencies, peerDependencies } = getPackageDependencies(uiPackage);
+  const { dependencies, peerDependencies } = getPackageDependencies(fdPackage);
 
   return (id: string) => {
     const packages: string[] = peerDependencies;

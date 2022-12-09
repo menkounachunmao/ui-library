@@ -7,6 +7,7 @@ import { projRoot, buildOutput, fdOutput, fdPackage } from "./src/utils/paths";
 import path from "path";
 import { buildConfig, Module } from "./src";
 
+// 复制配置
 export const copyFiles = () =>
   Promise.all([
     copyFile(fdPackage, path.join(fdOutput, "package.json")),
@@ -20,16 +21,17 @@ export const copyFiles = () =>
     ),
   ]);
 
+// 生成类型申明
 export const copyTypesDefinitions: TaskFunction = (done) => {
   const src = path.resolve(buildOutput, "types", "packages");
   const copyTypes = (module: Module) =>
     withTaskName(`copyTypes:${module}`, () =>
       copy(src, buildConfig[module].output.path, { recursive: true })
     );
-
   return parallel(copyTypes("esm"), copyTypes("cjs"))(done);
 };
 
+// 复制样式
 export const copyFullStyle = async () => {
   await mkdir(path.resolve(fdOutput, "dist"), { recursive: true });
   await copyFile(
@@ -40,7 +42,7 @@ export const copyFullStyle = async () => {
 
 export default series(
   withTaskName("clean", () => run("pnpm -w run clean")),
-  withTaskName("createOutput", () => mkdir(buildOutput, { recursive: true })),
+  withTaskName("createOutput", () => mkdir(fdOutput, { recursive: true })),
   parallel(
     runTask("buildModules"),
     runTask("buildFullBundle"),
