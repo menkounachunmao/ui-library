@@ -10,7 +10,9 @@ export function MarkdownTransform(): Plugin {
     enforce: "pre",
     async transform(code, id) {
       if (!id.endsWith(".md")) return;
-
+      // 排除没有 demo 标记的页面
+      const reg = /:::demo/g;
+      if (!code.match(reg)) return;
       const componentId = path.basename(id, ".md");
       const append: Append = {
         headers: [],

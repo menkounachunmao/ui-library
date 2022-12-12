@@ -8,8 +8,8 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     nav: [
-      { text: "指南", link: "/zh-cn/guide/index.html" },
-      { text: "组件", link: "/zh-cn/components/button.html" },
+      { text: "指南", link: "/zh-CN/guide/index.html" },
+      { text: "组件", link: "/zh-CN/components/button.html" },
     ],
     sidebar: sidebar,
   },

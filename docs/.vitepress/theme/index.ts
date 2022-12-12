@@ -2,6 +2,7 @@
 import DefaultTheme from "vitepress/theme";
 import FtDesign from "ft-design";
 import "element-plus/dist/index.css";
+import "element-plus/theme-chalk/dark/css-vars.css";
 import ElementPlus from "element-plus";
 import "./custom.css";
 import { globals } from "../vitepress/index.js";

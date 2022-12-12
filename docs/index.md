@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /guide/index
+      link: /zh-CN/guide/index
     - theme: alt
       text: View on GitHub
       link: https://github.com/vuejs/vitepress
