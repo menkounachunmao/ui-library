@@ -1,5 +1,5 @@
 import type { vShow } from "vue";
-const INSTALLED_KEY = Symbol("INSTALLED_KEY");
+const INSTALLED_KEY = "INSTALLED";
 
 declare global {
   const process: {

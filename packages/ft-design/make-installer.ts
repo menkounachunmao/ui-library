@@ -1,11 +1,11 @@
 import { version } from "./version";
 import type { App, Plugin } from "@vue/runtime-core";
-const INSTALLED_KEY = Symbol("INSTALLED_KEY");
+
 export const makeInstaller = (components: Plugin[] = []) => {
   const install = (app: App) => {
-    if (app[INSTALLED_KEY]) return;
+    if (app["INSTALLED"]) return;
 
-    app[INSTALLED_KEY] = true;
+    app["INSTALLED"] = true;
     components.forEach((c) => app.use(c));
   };
 
