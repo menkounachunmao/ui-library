@@ -9,8 +9,8 @@ hero:
       text: 开始使用
       link: /zh-CN/guide/index
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      text: 查看组件
+      link: /zh-CN/components/button.html
 features:
   - icon: ⚡️
     title: 便捷

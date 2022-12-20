@@ -6,13 +6,6 @@ export default defineConfig({
   title: "FDesgin",
   description: "Just playing around.",
   lastUpdated: true,
-  themeConfig: {
-    nav: [
-      { text: "指南", link: "/zh-CN/guide/index.html" },
-      { text: "组件", link: "/zh-CN/components/button.html" },
-    ],
-    sidebar: sidebar,
-  },
   markdown: {
     config: (md) => mdPlugin(md),
   },
