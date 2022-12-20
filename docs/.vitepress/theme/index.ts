@@ -9,11 +9,6 @@ import { globals } from "../vitepress/index.js";
 import sidebar from "../config/sidebar";
 export default {
   ...DefaultTheme,
-  nav: [
-    { text: "指南", link: "/zh-CN/guide/index.html" },
-    { text: "组件", link: "/zh-CN/components/button.html" },
-  ],
-  sidebar: sidebar,
   enhanceApp(ctx) {
     // 继承默认样式行为
     DefaultTheme.enhanceApp(ctx);
