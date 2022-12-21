@@ -1,12 +1,11 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import FtDesign from "ft-design";
-import "element-plus/dist/index.css";
+import "ft-design/theme-chalk/src/index.scss";
 import "element-plus/theme-chalk/dark/css-vars.css";
 import ElementPlus from "element-plus";
 import "./custom.css";
 import { globals } from "../vitepress/index.js";
-import sidebar from "../config/sidebar";
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {

@@ -1,5 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import "element-plus/dist/index.css";
+import "@ft-design/theme-chalk/src/index.scss";
 const app = createApp(App);
 app.mount("#app");

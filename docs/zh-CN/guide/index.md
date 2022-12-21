@@ -1,6 +1,6 @@
 # 使用 `ft-design`
 
-本节将介绍如何在项目中使用 Ft Design。
+:tada: 本节将介绍如何在项目中使用 Ft Design。
 
 ## 环境支持
 
@@ -37,8 +37,8 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import FtDesign from "ft-design";
-import "element-plus/dist/index.css";
-import "ft-design/dist/index.css";
+// 引入样式及主题(包含 Element 样式)
+import "ft-design/theme-chalk/src/index.scss";
 const app = createApp(App);
 app.use(router).mount("#app");
 app.use(FtDesign);
@@ -46,7 +46,14 @@ app.use(FtDesign);
 
 ### 2. 按需引入
 
-需要在使用组件的地方手动对 `Vc组件` 进行导入。
+需要在使用组件的地方手动对 `Ft Design 组件` 进行导入。
+
+<!-- main.ts -->
+
+```ts
+// 引入样式及主题(包含 Element 样式)
+import "ft-design/theme-chalk/src/index.scss";
+```
 
 ```html
 <!-- App.vue -->

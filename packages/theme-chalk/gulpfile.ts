@@ -21,7 +21,7 @@ function buildThemeChalk() {
   const sass = gulpSass(dartSass);
   const noElPrefixFile = /(index|base|display)/;
   return src(path.resolve(__dirname, "src/*.scss"))
-    .pipe(sass.sync())
+    .pipe(sass.sync({ includePaths: ["node_modules"] }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(
       cleanCSS({}, (details) => {

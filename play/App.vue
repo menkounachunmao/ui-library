@@ -1,6 +1,7 @@
 <template>
   <div>
     <FtButton>test</FtButton>
+    <FtButton type="primary">Primary</FtButton>
     <FtInput
       v-model="inputValue"
       placeholder="Please input"

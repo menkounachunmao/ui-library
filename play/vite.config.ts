@@ -5,4 +5,7 @@ import ElementPlus from "unplugin-element-plus/vite";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 export default defineConfig({
   plugins: [vue(), DefineOptions(), ElementPlus(), vueJsx()],
+  server: {
+    port: 2333,
+  },
 });

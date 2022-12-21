@@ -13,7 +13,7 @@ export default {
   ],
   "/zh-CN/components/": [
     {
-      text: "基础组件",
+      text: "Basic 基础组件",
       items: [
         { text: "按钮", link: "/zh-CN/components/button.html" },
         { text: "输入框", link: "/zh-CN/components/input.html" },
