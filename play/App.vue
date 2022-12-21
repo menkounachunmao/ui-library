@@ -3,13 +3,10 @@
     <FtButton>test</FtButton>
     <FtInput v-model="inputValue" />
   </div>
-  <div style="height: 400px; width: 400px">
-    <FtIframe url="https://caiyun001.fangte.com" />
-  </div>
 </template>
 <script lang="ts" setup>
-import FtIframe from "@ft-design/components/iframe";
 import { ref } from "vue";
-
+import FtButton from "@ft-design/components/button";
+import FtInput from "@ft-design/components/input";
 const inputValue = ref("");
 </script>
