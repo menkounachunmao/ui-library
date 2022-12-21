@@ -1,6 +1,7 @@
 # 申明受控制的区域
 packages:
-  - packages/** # 存放编写的组件的
+  - packages/* # 存放编写的组件的
+  - "!packages/ft-design"
   - play # 测试编写组件
   - docs
   - build

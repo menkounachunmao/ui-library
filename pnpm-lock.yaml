@@ -107,7 +107,7 @@ importers:
       '@element-plus/icons-vue': ^2.0.10
       '@types/markdown-it': ^12.2.3
       element-plus: ^2.2.21
-      ft-design: ^1.0.4
+      ft-design: npm:ft-design@latest
       markdown-it: ^13.0.1
       markdown-it-container: ^3.0.0
       prismjs: ^1.28.0
@@ -116,7 +116,7 @@ importers:
     dependencies:
       '@element-plus/icons-vue': 2.0.10_vue@3.2.45
       element-plus: 2.2.21_vue@3.2.45
-      ft-design: 1.0.4_vue@3.2.45
+      ft-design: 1.0.5_vue@3.2.45
       markdown-it: 13.0.1
       vue: 3.2.45
     devDependencies:
@@ -127,21 +127,6 @@ importers:
 
   packages/components:
     specifiers: {}
-
-  packages/ft-design:
-    specifiers:
-      '@types/node': '*'
-      '@vueuse/core': ^9.5.0
-      element-plus: ^2.2.21
-      sass: ^1.56.1
-      vue: ^3.2.37
-    dependencies:
-      '@vueuse/core': 9.5.0_vue@3.2.45
-      element-plus: 2.2.21_vue@3.2.45
-      sass: 1.56.1
-    devDependencies:
-      '@types/node': 18.11.11
-      vue: 3.2.45
 
   packages/theme-chalk:
     specifiers:
@@ -171,12 +156,10 @@ importers:
   play:
     specifiers:
       '@vitejs/plugin-vue': ^3.2.0
-      ft-design: workspace:^1.0.0
       vite: ^3.2.4
       vue: ^3.2.45
     dependencies:
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.2.0_vite@3.2.4+vue@3.2.45
-      ft-design: link:../packages/ft-design
       vite: registry.npmmirror.com/vite/3.2.4_sass@1.56.1
       vue: 3.2.45
 
@@ -4314,8 +4297,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /ft-design/1.0.4_vue@3.2.45:
-    resolution: {integrity: sha512-2uRTRouAsud9ksgQuEC5y/qJwtYGh33hbAyweXqtfy+h7N1dAPyrbqHPhB9aNI8uMcBWTIJXpXrI6Lmokad3bA==}
+  /ft-design/1.0.5_vue@3.2.45:
+    resolution: {integrity: sha512-QMPYu+ejTf4CU0AiD6KUz0XQVzl+0JQw+a1oD8yuByZmD/HrJctlQKtHaVdhvJFHJ4u023y1snOfJJ3KtlUIOA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:

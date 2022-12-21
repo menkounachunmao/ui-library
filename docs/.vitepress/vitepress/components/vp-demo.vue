@@ -61,12 +61,12 @@ const copyCode = async () => {
       <ElDivider style="margin: 0" />
 
       <div class="op-btns">
-        <ElTooltip :content="'copy-code'" :show-arrow="false">
+        <ElTooltip :content="'复制代码'" :show-arrow="false">
           <ElIcon :size="16" class="op-btn" @click="copyCode">
             <CopyDocument />
           </ElIcon>
         </ElTooltip>
-        <ElTooltip :content="'view-source'" :show-arrow="false">
+        <ElTooltip :content="'查看源码'" :show-arrow="false">
           <ElIcon :size="16" class="op-btn" @click="toggleSourceVisible()">
             <Monitor />
           </ElIcon>

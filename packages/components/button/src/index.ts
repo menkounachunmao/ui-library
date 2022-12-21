@@ -1,4 +1,5 @@
 import { ExtractPropTypes } from "vue";
+export { default as Button } from "./button";
 export const buttonProps = {
   size: {
     type: Number,
