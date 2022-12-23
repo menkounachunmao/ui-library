@@ -1,4 +1,4 @@
-import { Button } from "./src/index";
+import Button from "./src/button";
 import { withInstall } from "@ft-design/utils";
 
 const FtButton = withInstall(Button);

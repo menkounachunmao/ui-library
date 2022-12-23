@@ -1,4 +1,4 @@
-import { Input } from "./src/index";
+import Input from "./src/input";
 import { withInstall } from "@ft-design/utils";
 
 const FtInput = withInstall(Input);

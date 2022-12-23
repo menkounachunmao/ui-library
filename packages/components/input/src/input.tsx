@@ -1,6 +1,6 @@
 import { defineComponent } from "vue";
 import { ElInput } from "element-plus";
-const FtInput = defineComponent({
+export default defineComponent({
   name: "FtInput",
   components: { ElInput },
   setup(props, { slots }) {
@@ -9,4 +9,3 @@ const FtInput = defineComponent({
     };
   },
 });
-export default FtInput;
