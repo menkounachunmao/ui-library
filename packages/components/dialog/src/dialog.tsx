@@ -14,6 +14,7 @@ export default defineComponent({
     return () => {
       return (
         <el-dialog
+          class="ft-dialog"
           close-on-click-modal={props.closeOnClickModal}
           title={props.title}
         >

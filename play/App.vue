@@ -17,7 +17,7 @@
 
     <ElDivider />
     <FtButton @click="dialogTableVisible = true">测试弹框</FtButton>
-    <FtDialog v-model="dialogTableVisible" title="测试弹框"></FtDialog>
+    <FtDialog v-model="dialogTableVisible" title="测试弹框">飞洒地方</FtDialog>
   </div>
 </template>
 <script lang="ts" setup>
@@ -25,6 +25,7 @@ import { ref } from "vue";
 import FtButton from "@ft-design/components/button";
 import FtInput from "@ft-design/components/input";
 import FtDialog from "@ft-design/components/dialog";
+import "@ft-design/theme-chalk/src/dialog.scss";
 import { ElDivider } from "element-plus";
 const inputValue = ref("");
 const select = ref<string>();
