@@ -1,0 +1,8 @@
+@use "./var.scss" as *;
+.can-click {
+  color: $them-color;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
